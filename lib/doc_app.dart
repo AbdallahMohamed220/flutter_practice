@@ -15,6 +15,7 @@ class DocApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: "Doc App",
         theme: ThemeData(
           primaryColor: AppColors.blueColor,
