@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_practice/core/routing/routes.dart';
 import 'package:flutter_application_practice/core/theme/styles.dart';
 import 'package:flutter_application_practice/core/widgets/elevated_button.dart';
 import 'package:flutter_application_practice/features/onboarding/views/doc_logo_and_name.dart';
@@ -36,7 +37,9 @@ class OnboardingScreen extends StatelessWidget {
                 SizedBox(height: 30.h),
                 CustomElevatedButton(
                   label: "Get Started",
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, Routes.loginScreen);
+                  },
                   textStyle: TextStyles.whiteSemiBold18,
                   elevation: 0,
                   borderRadius: 16,
