@@ -23,8 +23,8 @@ class DoctorImageAndText extends StatelessWidget {
             foregroundDecoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  AppColors.whiteColor,
-                  AppColors.whiteColor.withOpacity(0.0),
+                  AppColors.white,
+                  AppColors.white.withOpacity(0.0),
                 ],
                 begin: Alignment.bottomCenter,
                 end: Alignment.topCenter,
