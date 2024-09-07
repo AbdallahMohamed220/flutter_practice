@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_practice/core/theme/colors.dart';
+import 'package:flutter_application_practice/core/theme/styles.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   final String label;
@@ -17,8 +18,8 @@ class CustomElevatedButton extends StatelessWidget {
     super.key,
     required this.label,
     required this.onPressed,
-    this.backgroundColor,
-    this.borderRadius = 8.0,
+    this.backgroundColor = AppColors.blue,
+    this.borderRadius = 16.0,
     this.elevation = 0.0,
     this.padding,
     this.textStyle,
@@ -32,7 +33,7 @@ class CustomElevatedButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        backgroundColor: backgroundColor ?? AppColors.blueColor,
+        backgroundColor: backgroundColor,
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(borderRadius),
@@ -45,7 +46,7 @@ class CustomElevatedButton extends StatelessWidget {
       ),
       child: Text(
         label,
-        style: textStyle,
+        style: textStyle ?? TextStyles.whiteSemiBold18,
       ),
     );
   }
